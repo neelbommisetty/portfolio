@@ -1,17 +1,18 @@
-import { Grid } from "semantic-ui-react";
-import React from "react";
-import Helmet from "react-helmet";
+import { Grid } from 'semantic-ui-react';
+import React from 'react';
+import Helmet from 'react-helmet';
 // import PostListing from "../components/PostListing/PostListing";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
+import SEO from '../components/SEO/SEO';
+import config from '../../data/SiteConfig';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import './resume.css';
 
-class Index extends React.Component {
+class Resume extends React.Component {
   render() {
     // const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <Grid className="index-container" padded>
+      <Grid className="Resume-container" padded>
         <Grid.Row>
           <Grid.Column>
             <Helmet title={config.siteTitle} />
@@ -21,7 +22,9 @@ class Index extends React.Component {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
-            <h1>Hi I am Neel.I am a Frontend Developer from Bengaluru,India.</h1>
+            <div>
+              <embed  className="resume-frame" src="/resume.pdf" width="800px" height="700px" />
+            </div>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -34,4 +37,4 @@ class Index extends React.Component {
   }
 }
 
-export default Index;
+export default Resume;

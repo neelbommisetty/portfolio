@@ -1,4 +1,4 @@
-import React,{ Component } from "react";
+import React, { Component } from 'react';
 import { Grid } from 'semantic-ui-react';
 import Link from 'gatsby-link';
 // import config from '../../../data/SiteConfig';
@@ -7,27 +7,26 @@ import './Header.css';
 
 export default class Header extends Component {
   render() {
-    return (
-      <header>
+    return <header>
         <nav>
           <Grid columns={2}>
-            <Grid.Column>
+            <Grid.Column width={4}>
               <Logo />
             </Grid.Column>
-            <Grid.Column>
+            <Grid.Column width={4} />
+            <Grid.Column width={8}>
               <ul className="nav-links">
-                <li>
-                  <Link to="/about">About Me</Link>
-                </li>
                 <li>
                   <Link to="/contact">Contact</Link>
                 </li>
                 <li>
-                  <Link to="/blog">Blog</Link>
+                  <a href="https://medium.com/@neelbommisetty" rel="noopener noreferrer" target="_blank">
+                    Blog
+                  </a>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/uses">Uses</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/resume">Resume</Link>
                 </li>
@@ -35,7 +34,6 @@ export default class Header extends Component {
             </Grid.Column>
           </Grid>
         </nav>
-      </header>
-    );
+      </header>;
   }
-};
+}
